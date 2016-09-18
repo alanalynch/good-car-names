@@ -41,8 +41,8 @@ def car_name(query):
     }
 
     average = [freqs[c] for c in query.lower() if c in freqs.keys()]
-    return str(sum(average)/len(average))
+    return sum(average)/len(average)
 
 if __name__=='__main__':
     test = raw_input("What do you think makes a good car name? ")
-    print car_name(test) + ": fine, I suppose" if int(car_name(test)) >= 0 else car_name(test) + ": garbage"
+    print str(car_name(test)) + ": fine, I suppose" if car_name(test) >= 0 else str(car_name(test)) + ": garbage"
