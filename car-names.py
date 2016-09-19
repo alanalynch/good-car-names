@@ -41,7 +41,7 @@ def car_name(query):
     }
 
     average = [freqs[c] for c in query.lower() if c in freqs.keys()]
-    return sum(average)/len(average)
+    return 0.1*(sum(average)/len(average))
 
 if __name__=='__main__':
     test = raw_input("What do you think makes a good car name? ")
